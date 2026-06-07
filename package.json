@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jest": "^30.4.2",
+    "selenium-webdriver": "^4.44.0"
+  },
+  "name": "calculo_imc",
+  "version": "1.0.0",
+  "description": "Projeto avaliativo do professor Sergio.\r Aprendizado de GitHub Actions e início de API em Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Levi-Mid/calculo_imc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Levi-Mid/calculo_imc/issues"
+  },
+  "homepage": "https://github.com/Levi-Mid/calculo_imc#readme"
+}

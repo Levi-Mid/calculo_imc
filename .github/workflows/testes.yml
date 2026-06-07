@@ -1,0 +1,43 @@
+name: Testes IMC
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  testes:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Baixar codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Iniciar servidor
+        run: node api/src/server.js &
+
+      - name: Esperar servidor subir
+        run: sleep 5
+
+      - name: Executar Selenium
+        run: node e2e/tests/imc.test.js
+
+      - name: Salvar screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: e2e/screenshots
